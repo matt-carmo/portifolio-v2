@@ -1,101 +1,252 @@
+import { Header } from "@/components/Header";
 import Image from "next/image";
-
+import { useState } from "react";
+import { FaReact } from "react-icons/fa";
+import {
+  FaAlignJustify,
+  FaArrowUp,
+  FaBars,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaNodeJs,
+} from "react-icons/fa6";
+import { SiPostgresql, SiTypescript } from "react-icons/si";
+import  '../styles/global.css'
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+  return (
+    <>
+      <Header />
+
+      <main className="bg-[#161513] px-3">
+        <section
+          id="home"
+          className="flex flex-col justify-center items-center text-center mx-auto max-w-7xl"
+        >
+          <div className="max-w-[674px] flex items-center flex-col gap-8">
+            <div className="mt-20 max-w-50">
+              <Image src="/avatar.png" alt="Hero" width={250} height={250} />
+            </div>
+            <h1 className="text-2xl md:text-5xl text-center font-bold">
+              Desenvolvedor
+              <span className="ml-2 bg-gradient-to-r  from-[#FF8660] to-[#9A33FF] bg-clip-text text-transparent">
+                Full Stack
+              </span>
+            </h1>
+            <p className="text-[#C5C5C5] text-xs md:text-base">
+              Desenvolvedor Full Stack com 2 anos de experiência em
+              desenvolvimento web e mobile. Habilidade em criar aplicações
+              modernas e eficientes utilizando React.js, Node.js, Bun, Prisma e
+              Postgres. Experiência em desenvolvimento mobile com Ionic e React
+              Native. Foco em SEO, otimização de performance, e melhoria da
+              experiência do usuário.
+            </p>
+            <div className="flex gap-x-4">
+              <button className="bg-white px-4 py-3  rounded-full font-bold text-[#161513]">
+                Get in Touch
+              </button>
+              <button className="bg-[#161513] px-4 py-3 rounded-full border  font-bold text-[#ffff]">
+                Download CV
+              </button>
+            </div>
+            <span className="uppercase text-[#C5C5C5] font-medium tracking-wider text-xl">
+              Experiencia com
+            </span>
+            <div className="flex gap-8 text-5xl">
+              <SiTypescript />
+              <FaReact />
+              <FaNodeJs />
+              <SiPostgresql />
+            </div>
+          </div>
+        </section>
+        <section className="max-w-6xl mx-auto mt-10 md:mt-20" id="projects">
+          <h2 className="mb-6 uppercase text-2xl md:text-4xl text-center text-transparent bg-clip-text font-extrabold bg-gradient-to-b from-[#FF8660] to-[#D5491D]">
+            Projetos
+          </h2>
+          <ul className="flex flex-col md:flex-row gap-4 justify-between">
+            <li>
+              <Image
+                alt="Imagem do projeto"
+                className="rounded-t-3xl w-full"
+                width={390}
+                height={235}
+                src={"/R_kgDOG5b2bw.webp"}
+              ></Image>
+              <div className="px-3 py-2 flex items-center justify-between">
+                <h4 className="font-semibold text-lg">
+                  Sunnyside gency landing page{" "}
+                </h4>
+                <FaArrowUp className="rotate-[45deg]" />
+              </div>
+            </li>
+            <li>
+              <Image
+                alt="Imagem do projeto"
+               className="rounded-t-3xl w-full"
+                width={390}
+                height={235}
+                src={"/R_kgDOGa-BQA.webp"}
+              ></Image>
+              <div className="px-3 py-2 flex items-center justify-between">
+                <h4 className="font-semibold text-lg">Flex Blog</h4>
+                <FaArrowUp className="rotate-[45deg]" />
+              </div>
+            </li>
+            <li>
+              <Image
+                alt="Imagem do projeto"
+                className="rounded-t-3xl w-full"
+                width={390}
+                height={235}
+                src={"/R_kgDOHNq7Yw.webp"}
+              ></Image>
+              <div className="px-3 py-2 flex items-center justify-between">
+                <h4 className="font-semibold text-lg">Illegal Inc</h4>
+                <FaArrowUp className="rotate-[45deg]" />
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section className="max-w-6xl mx-auto mt-10 md:mt-20" id="experience">
+          <h2 className="mb-6 uppercase text-2xl md:text-4xl text-center text-transparent bg-clip-text font-extrabold bg-gradient-to-b from-[#5BADFF] to-[#1373D1]">
+            Experiência
+          </h2>
+          <ul className="gap-6 flex flex-col">
+            <li>
+              <div className="md:flex justify-between">
+                <h4 className="text-sm font-bold md:text-lg">
+                  Desenvolvedor Web - Lion Produtos Naturais
+                </h4>
+                <span className="text-gray-400 font-medium text-xs md:text-base">
+                  out 2023 - abr 2024
+                </span>
+              </div>
+              <ul className="list-disc list-inside px-4 py-3 text-gray-400 font-medium md:text-base text-xs flex flex-col gap-3">
+                <li>
+                  Desenvolvi e reestruturei landing pages em WordPress,
+                  melhorando a eficiência e responsividade.
+                </li>
+                <li>
+                  Criei páginas otimizadas para SEO, aumentando a visibilidade
+                  online da empresa.
+                </li>
+                <li>
+                  Contribuí para a melhoria contínua da experiência do usuário.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div className="md:flex justify-between">
+                <h4 className="text-sm font-bold md:text-lg">
+                  Estagiário Desenvolvedor Front-End - Enterlight
+                </h4>
+
+                <span className="text-gray-400 font-medium text-xs md:text-base">
+                  jun 2022 - jun 2023
+                </span>
+              </div>
+              <ul className="list-disc list-inside px-4 py-3 text-gray-400 font-medium md:text-base text-xs flex flex-col gap-3">
+                <li>
+                  Criei interfaces para sistema ERP e desenvolvi aplicações
+                  mobile.
+                </li>
+                <li>
+                  Implementei melhorias na interatividade e design do sistema,
+                  aprimorando a usabilidade.
+                </li>
+                <li>
+                  Desenvolvi o front end do site institucional, assegurando uma
+                  experiência de usuário positiva.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section className="max-w-6xl mx-auto mt-10 md:mt-20 pb-20" id="degrees">
+          <h2 className="mb-6 uppercase text-2xl md:text-4xl text-center text-transparent bg-clip-text font-extrabold bg-gradient-to-b from-[#FF8660] to-[#FF5E00]">
+            Formação
+          </h2>
+          <ul className="gap-6 flex flex-col">
+            <li>
+              <div className="md:flex justify-between">
+                <h4 className="font-semibold md:text-lg text-sm">
+                  Bacharelado em Tecnologia da Informação - Univesp
+                </h4>
+
+                <span className="text-gray-400 font-medium text-xs md:text-base">
+                  jul 2024 - dez 2027
+                </span>
+              </div>
+              {/* <ul className="list-disc list-inside px-4 py-3 text-gray-400 font-medium md:text-base text-xs flex flex-col gap-3">
+                <li>
+                  Criei interfaces para sistema ERP e desenvolvi aplicações
+                  mobile.
+                </li>
+                <li>
+                  Implementei melhorias na interatividade e design do sistema,
+                  aprimorando a usabilidade.
+                </li>
+                <li>
+                  Desenvolvi o front end do site institucional, assegurando uma
+                  experiência de usuário positiva.
+                </li>
+              </ul> */}
+            </li>
+            <li>
+              <div className="md:flex justify-between">
+                <h4 className="font-semibold md:text-lg text-sm">
+                  Técnico de informática para Internet - Senac
+                </h4>
+                <span className="text-gray-400 font-medium text-xs md:text-base">
+                  fev 2022 - jun 2023
+                </span>
+              </div>
+              {/* <ul className="list-disc list-inside px-4 py-3 text-gray-400 font-medium md:text-base text-xs flex flex-col gap-3">
+                <li>
+                  Desenvolvi e reestruturei landing pages em WordPress,
+                  melhorando a eficiência e responsividade.
+                </li>
+                <li>
+                  Criei páginas otimizadas para SEO, aumentando a visibilidade
+                  online da empresa.
+                </li>
+                <li>
+                  Contribuí para a melhoria contínua da experiência do usuário.
+                </li>
+              </ul> */}
+            </li>
+          </ul>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="bg-[#191919] py-10">
+        <section id="contact" className="max-w-6xl mx-auto py-6 flex flex-col gap-2 items-center md:items-start">
+          <h2 className="text-3xl font-semibold mb-2">Contato</h2>
+          <p className="text-gray-400">
+            Entre em contato para mais informações.
+          </p>
+          <div className="flex ">
+            <ul className="flex gap-6">
+              <li>
+                <a href="https://www.linkedin.com/in/matt-carmo">
+                  <FaLinkedin className="text-3xl" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/matt-carmo">
+                  <FaGithub className="text-3xl" />
+                </a>
+              </li>
+              <li>
+                <a href="mailto:matheus2018i@gmail.com">
+                <FaEnvelope className="text-3xl" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
       </footer>
-    </div>
+    </>
   );
 }
