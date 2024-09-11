@@ -26,7 +26,7 @@ export const Header = () => {
           <li onClick={()=> setOpenMenu(false)}>
             <a href="#experience">Experiência</a>
           </li>
-          <li>
+          <li onClick={()=> setOpenMenu(false)}>
             <a href="#contact">Contato</a>
           </li>
         </ul>

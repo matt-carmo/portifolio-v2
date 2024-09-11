@@ -3,18 +3,15 @@ import Image from "next/image";
 
 import { FaReact } from "react-icons/fa";
 import {
-
   FaArrowUp,
-
   FaEnvelope,
   FaGithub,
   FaLinkedin,
   FaNodeJs,
 } from "react-icons/fa6";
 import { SiPostgresql, SiTypescript } from "react-icons/si";
-import  '../styles/global.css'
+import "../styles/global.css";
 export default function Home() {
-
   return (
     <>
       <Header />
@@ -25,7 +22,7 @@ export default function Home() {
           className="flex flex-col justify-center items-center text-center mx-auto max-w-7xl"
         >
           <div className="max-w-[674px] flex items-center flex-col gap-8">
-            <div className="mt-20 max-w-50">
+            <div className="mt-20 md:max-w-50 w-1/2 flex justify-center">
               <Image src="/avatar.png" alt="Hero" width={250} height={250} />
             </div>
             <h1 className="text-2xl md:text-5xl text-center font-bold">
@@ -43,12 +40,16 @@ export default function Home() {
               experiência do usuário.
             </p>
             <div className="flex gap-x-4">
-              <button className="bg-white px-4 py-3  rounded-full font-bold text-[#161513]">
-                Get in Touch
-              </button>
-              <button className="bg-[#161513] px-4 py-3 rounded-full border  font-bold text-[#ffff]">
+              <a
+                href="/matheus-hg-carmo.pdf"
+                download="matheus-carmo.pdf"
+                className="bg-[#161513] px-4 py-3 rounded-full border  font-bold text-[#ffff]"
+              >
                 Download CV
-              </button>
+              </a>
+              {/* <button className="bg-[#161513] px-4 py-3 rounded-full border  font-bold text-[#ffff]">
+                Download CV
+              </button> */}
             </div>
             <span className="uppercase text-[#C5C5C5] font-medium tracking-wider text-xl">
               Experiencia com
@@ -67,45 +68,51 @@ export default function Home() {
           </h2>
           <ul className="flex flex-col md:flex-row gap-4 justify-between">
             <li>
-              <Image
-                alt="Imagem do projeto"
-                className="rounded-t-3xl w-full"
-                width={390}
-                height={235}
-                src={"/R_kgDOG5b2bw.webp"}
-              ></Image>
-              <div className="px-3 py-2 flex items-center justify-between">
-                <h4 className="font-semibold text-lg">
-                  Sunnyside gency landing page{" "}
-                </h4>
-                <FaArrowUp className="rotate-[45deg]" />
-              </div>
+              <a href="https://github.com/matt-carmo/Sunnyside-agency-landing-page">
+                <Image
+                  alt="Imagem do projeto"
+                  className="rounded-t-3xl w-full"
+                  width={390}
+                  height={235}
+                  src={"/R_kgDOG5b2bw.webp"}
+                ></Image>
+                <div className="px-3 py-2 flex items-center justify-between">
+                  <h4 className="font-semibold md:text-lg">
+                    Sunnyside agency landing page{" "}
+                  </h4>
+                  <FaArrowUp className="rotate-[45deg]" />
+                </div>
+              </a>
             </li>
             <li>
-              <Image
-                alt="Imagem do projeto"
-               className="rounded-t-3xl w-full"
-                width={390}
-                height={235}
-                src={"/R_kgDOGa-BQA.webp"}
-              ></Image>
-              <div className="px-3 py-2 flex items-center justify-between">
-                <h4 className="font-semibold text-lg">Flex Blog</h4>
-                <FaArrowUp className="rotate-[45deg]" />
-              </div>
+              <a href="https://github.com/matt-carmo/FlexBlog">
+                <Image
+                  alt="Imagem do projeto"
+                  className="rounded-t-3xl w-full"
+                  width={390}
+                  height={235}
+                  src={"/R_kgDOGa-BQA.webp"}
+                ></Image>
+                <div className="px-3 py-2 flex items-center justify-between">
+                  <h4 className="font-semibold md:text-lg">Flex Blog</h4>
+                  <FaArrowUp className="rotate-[45deg]" />
+                </div>
+              </a>
             </li>
             <li>
-              <Image
-                alt="Imagem do projeto"
-                className="rounded-t-3xl w-full"
-                width={390}
-                height={235}
-                src={"/R_kgDOHNq7Yw.webp"}
-              ></Image>
-              <div className="px-3 py-2 flex items-center justify-between">
-                <h4 className="font-semibold text-lg">Illegal Inc</h4>
-                <FaArrowUp className="rotate-[45deg]" />
-              </div>
+              <a href="https://projetosenac.netlify.app/">
+                <Image
+                  alt="Imagem do projeto"
+                  className="rounded-t-3xl w-full"
+                  width={390}
+                  height={235}
+                  src={"/R_kgDOHNq7Yw.webp"}
+                ></Image>
+                <div className="px-3 py-2 flex items-center justify-between">
+                  <h4 className="font-semibold md:text-lg">Illegal Inc</h4>
+                  <FaArrowUp className="rotate-[45deg]" />
+                </div>
+              </a>
             </li>
           </ul>
         </section>
@@ -164,7 +171,10 @@ export default function Home() {
             </li>
           </ul>
         </section>
-        <section className="max-w-6xl mx-auto mt-10 md:mt-20 pb-20" id="degrees">
+        <section
+          className="max-w-6xl mx-auto mt-10 md:mt-20 pb-20"
+          id="degrees"
+        >
           <h2 className="mb-6 uppercase text-2xl md:text-4xl text-center text-transparent bg-clip-text font-extrabold bg-gradient-to-b from-[#FF8660] to-[#FF5E00]">
             Formação
           </h2>
@@ -221,7 +231,10 @@ export default function Home() {
         </section>
       </main>
       <footer className="bg-[#191919] py-10">
-        <section id="contact" className="max-w-6xl mx-auto py-6 flex flex-col gap-2 items-center md:items-start">
+        <section
+          id="contact"
+          className="max-w-6xl mx-auto py-6 flex flex-col gap-2 items-center md:items-start"
+        >
           <h2 className="text-3xl font-semibold mb-2">Contato</h2>
           <p className="text-gray-400">
             Entre em contato para mais informações.
@@ -240,7 +253,7 @@ export default function Home() {
               </li>
               <li>
                 <a href="mailto:matheus2018i@gmail.com">
-                <FaEnvelope className="text-3xl" />
+                  <FaEnvelope className="text-3xl" />
                 </a>
               </li>
             </ul>
