@@ -1,11 +1,11 @@
 import { Header } from "@/components/Header";
 import Image from "next/image";
-import { useState } from "react";
+
 import { FaReact } from "react-icons/fa";
 import {
-  FaAlignJustify,
+
   FaArrowUp,
-  FaBars,
+
   FaEnvelope,
   FaGithub,
   FaLinkedin,
