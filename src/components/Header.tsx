@@ -28,7 +28,7 @@ export const Header = () => {
         <button onClick={handleMenu} className="flex md:hidden">
           <FaBars />
         </button>
-        <ul className={`gap-x-16 font-medium text-lg mt-1 flex md:flex-row flex-col text-center w-full md:w-auto md:static absolute left-0 top-14 md:translate-y-0 md:bottom-0  bg-[#1e1e1d] md:bg-transparent overflow-hidden origin-top transition-all duration-300 md:max-h-[unset] ${openMenu ? "max-h-96 pb-3" : "max-h-0"}`}>
+        <ul className={`gap-x-16 font-medium text-white text-lg mt-1 flex md:flex-row flex-col text-center w-full md:w-auto md:static absolute left-0 top-14 md:translate-y-0 md:bottom-0  bg-[#1e1e1d] md:bg-transparent overflow-hidden origin-top transition-all duration-300 md:max-h-[unset] ${openMenu ? "max-h-96 pb-3" : "max-h-0"}`}>
           <li onClick={()=> setOpenMenu(false)}>
             <a href="#home">Home</a>
           </li>

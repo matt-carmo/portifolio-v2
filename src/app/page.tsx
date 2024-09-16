@@ -33,7 +33,7 @@ export default function Home() {
             >
               <Image src="/avatar.png" alt="Hero" width={250} height={250} />
             </motion.div>
-            <h1 className="text-2xl md:text-5xl text-center font-bold">
+            <h1 className="text-2xl md:text-5xl text-center font-bold text-white">
               Desenvolvedor
               <span className="ml-2 bg-gradient-to-r  from-[#FF8660] to-[#9A33FF] bg-clip-text text-transparent">
                 Full Stack
@@ -62,7 +62,7 @@ export default function Home() {
             <span className="uppercase text-[#C5C5C5] font-medium tracking-wider text-xl">
               Experiencia com
             </span>
-            <div className="md:flex grid-cols-3 grid gap-8 text-5xl">
+            <div className="md:flex grid-cols-3 grid gap-8 text-5xl text-gray-100">
               <motion.div
                 transition={{ delay: 0.75 }}
                 initial={{ x: -50, opacity: 0 }}
@@ -199,7 +199,7 @@ export default function Home() {
           <ul className="gap-6 flex flex-col">
             <li>
               <div className="md:flex justify-between">
-                <h4 className="text-sm font-bold md:text-lg">
+                <h4 className="text-sm font-bold md:text-lg text-white">
                   Desenvolvedor Web - Lion Produtos Naturais
                 </h4>
                 <span className="text-gray-200 font-medium text-xs md:text-base">
@@ -222,7 +222,7 @@ export default function Home() {
             </li>
             <li>
               <div className="md:flex justify-between">
-                <h4 className="text-sm font-bold md:text-lg">
+                <h4 className="text-sm font-bold md:text-lg text-white">
                   Estagiário Desenvolvedor Front-End - Enterlight
                 </h4>
 
@@ -311,12 +311,12 @@ export default function Home() {
           id="contact"
           className="max-w-6xl mx-auto py-6 flex flex-col gap-2 items-center md:items-start"
         >
-          <h2 className="text-3xl font-semibold mb-2">Contato</h2>
+          <h2 className="text-3xl font-semibold mb-2 text-white">Contato</h2>
           <p className="text-gray-200">
             Entre em contato para mais informações.
           </p>
           <div className="flex ">
-            <ul className="flex gap-6">
+            <ul className="flex gap-6 text-white">
               <li>
                 <a href="https://www.linkedin.com/in/matt-carmo">
                   <FaLinkedin className="text-3xl" />
