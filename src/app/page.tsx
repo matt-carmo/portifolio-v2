@@ -121,7 +121,7 @@ export default function Home() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 2 }}
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  whileInView={{ opacity: 1 }}
                   className="item"
                   transition={{ duration: 0.2 }}
                 >
@@ -147,7 +147,7 @@ export default function Home() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 2 }}
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  whileInView={{ opacity: 1 }}
                   className="item"
                   transition={{ duration: 0.2 }}
                 >
@@ -172,7 +172,7 @@ export default function Home() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 2 }}
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  whileInView={{ opacity: 1 }}
                   className="item"
                   transition={{ duration: 0.2 }}
                 >
