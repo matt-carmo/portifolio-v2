@@ -29,7 +29,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="mt-20 md:max-w-50 w-1/2 flex justify-center"
+              className="mt-24 md:max-w-50 w-1/2 flex justify-center"
             >
               <Image src="/avatar.png" alt="Hero" width={250} height={250} />
             </motion.div>
