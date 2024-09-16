@@ -257,7 +257,7 @@ export default function Home() {
           <ul className="gap-6 flex flex-col">
             <li>
               <div className="md:flex justify-between">
-                <h4 className="font-semibold md:text-lg text-sm">
+                <h4 className="font-semibold md:text-lg text-sm text-gray-200">
                   Bacharelado em Tecnologia da Informação - Univesp
                 </h4>
 
@@ -282,7 +282,7 @@ export default function Home() {
             </li>
             <li>
               <div className="md:flex justify-between">
-                <h4 className="font-semibold md:text-lg text-sm">
+                <h4 className="font-semibold md:text-lg text-sm text-gray-200">
                   Técnico de informática para Internet - Senac
                 </h4>
                 <span className="text-gray-200 font-medium text-xs md:text-base">
